@@ -1,0 +1,101 @@
+body {
+  background-color: #999999;
+  font-family: "Manrope", sans-serif;
+}
+#root {
+  width: 100%;
+  max-width: 1440px;
+  min-width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-image: url(https://365psd.com/images/istock/previews/9201/92015991-happy-birthday-vintage-pattern-background.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+button {
+  padding: 14px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 20;
+}
+button:active {
+  transform: scale(0.95);
+}
+button.open {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: red;
+  border-radius: 50%;
+  width: 50px;
+  padding: 0;
+  height: 50px;
+}
+#button {
+  animation: show 0.5s linear forwards;
+  position: relative;
+  top: 500px;
+}
+@keyframes show {
+  100% {
+    top: 0;
+  }
+}
+h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 480px;
+}
+h2#to {
+  font-weight: 700;
+}
+.content {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 4px;
+  min-height: 270px;
+  justify-content: flex-end;
+  padding: 30px;
+  width: 355px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.content::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  left: 6px;
+  height: 375px;
+  position: absolute;
+  border: 1px solid black;
+  background-color: white;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+  top: -270px;
+}
+.content.hidden::after {
+  transform: rotateX(180deg) translateY(100%);
+}
+.content.hidden {
+  justify-content: center;
+}
+
+.display-none {
+  display: none;
+}
