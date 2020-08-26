@@ -10,8 +10,10 @@ const messages = [
   "Soy Angel",
   "y vengo a dejarte este mensaje:",
   "Hoy es un dia especial",
+  "es el dia en que naciste",
   "el dia en que cumples un año más de vida",
   "o uno menos...",
+  "aja",
   "bien sabes que el término tiempo es relativo",
   "como decia mi querido colega Alberto Afganistan",
   "a lo mejor todo lo que vemos es una ilusión",
@@ -49,7 +51,7 @@ const showMessages = () => {
 const displayContent = () => {
   cardContent.classList.remove("display-none");
   to.classList.add("display-none");
-  openButton.classList.add('display-none')
+  openButton.classList.add("display-none");
   content.classList.add("hidden");
 };
 openButton.addEventListener("click", displayContent);
